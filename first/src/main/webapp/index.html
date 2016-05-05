@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" ng-app="visionBharati">
+<head>
+<title>Vision Bharati</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- js -->
+<!-- angular -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.js"></script>
+
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-cookies.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-touch.js"></script>
+
+<!-- bootstrap -->	
+<script
+	src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+
+<!-- custom js -->
+<script src="resources/js/app.js"></script>
+
+<!-- third party -->
+<!-- pageslide -->
+<script src="resources/js/angular-pageslide-directive.js"></script>
+<!-- css -->
+<link
+	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- this style sheet should be the last to load -->	
+<link href="resources/css/style.css" rel="stylesheet">
+</head>
+<body>
+	<!-- header -->
+   <div id="includeHeader" ng-include="'navbar.html'"></div>
+
+	<!-- content -->
+	<div id="wrap">
+		<div id="viewPage" ng-view></div>
+		<div id="push"></div>
+	</div>
+
+	<!-- footer -->
+	<div id="includeFooter" ng-include="'footer.html'"></div>
+</body>
+</html>

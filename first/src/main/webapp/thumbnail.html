@@ -1,0 +1,40 @@
+<style>
+
+/* Thumbnail Images*/
+
+.thumbnail img{
+    width: 220px;
+    height: 100px;
+}
+
+.col-md-3{
+    padding: 15px;
+    width: 220px;
+    height: 220px;		
+}
+
+.col-md-3 a {
+    margin-bottom: 0;
+}
+
+/*Thumbnail end */
+
+</style>
+
+<div class="container"ng-controller="homeCtrl">
+<div  class="row">
+	<div class="col-sm-6 col-md-3" ng-repeat="slide in slides">
+		<a ng-href="#/{{slide.url}}" class="thumbnail text-center"> <img
+			ng-src="{{slide.image}}" class="img-thumbnail" alt="{{slide.name}}">
+			<div class="caption">
+				<h6>{{slide.name}}</h6>
+				<p>
+					<small> <span class="glyphicon glyphicon-heart-empty"></span>
+						{{slide.text}} <span class="glyphicon glyphicon-heart-empty"></span>
+					</small>
+				</p>
+			</div>
+		</a>
+	</div>
+	</div>
+</div>

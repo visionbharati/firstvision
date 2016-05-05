@@ -1,0 +1,26 @@
+	<header id="header">
+			<div name="headslide" ng-controller="homeCtrl">
+				<div style="height: 305px">
+					<!-- <div class="overlay">
+						<p>
+						<h1>Vision Bharati</h1>
+						<small>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;A
+							company that touches life..</small>
+
+						</p>
+					</div> -->
+					<uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+					<uib-slide ng-repeat="slide in slides" active="slide.active">
+					<img ng-src="{{slide.image}}"
+						style="min-height: 100px; max-height: 300px; width: 100%; margin: 0 auto;">
+					<div class="carousel-caption">
+						<h3>{{slide.name}}</h3>
+						<p>
+							<span class="glyphicon glyphicon-heart-empty"></span>
+							{{slide.text}} <span class="glyphicon glyphicon-heart-empty"></span>
+						</p>
+					</div>
+					</uib-slide> </uib-carousel>
+				</div>
+			</div>
+	</header>

@@ -1,0 +1,63 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="navCtrl">
+      <div scroll  ng-class="{min:boolChangeClass}">
+      <div class="container">
+		<div class="navbar-header">
+					<span class="navbar-brand"><img 
+				src="resources/images/logo_backup.gif"  width="290" height="85" /></span>			
+			<button type="button" class="navbar-toggle"	ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+				<span class="sr-only">Toggle navigation</span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span>
+			</button>
+
+
+		</div>
+        <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+			<ul class="nav navbar-nav">		
+		  	<li ng-controller="pageslideCtrl">
+				<a href ng-click="toggle()"><span
+					class="glyphicon glyphicon-tasks" aria-hidden="true"></span></a>
+				<div pageslide ps-open="checked" ps-side="left" ps-size="400px">
+					<div style="padding:2px" id="demo-right">
+						<div ng-include="'sidebar.html'"></div>
+					</div>
+				</div> 
+			</li>
+			<li><a href="#/">Home</a></li>
+			<li><a href="">Languages</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			<li uib-dropdown class="dropdown menu-large">
+                  <a href="#" uib-dropdown-toggle class="dropdown-toggle" data-toggle="dropdown"> Services <b class="caret"></b> </a>
+                  <ul uib-dropdown-menu class="dropdown-menu megamenu row" ng-controller="homeCtrl">
+                    <li>
+                  
+<!-- include thumbnail html -->
+<div id="includeHeader" ng-include="'thumbnail.html'"></div>
+
+					</li>
+                  </ul>
+            </li>
+<!-- 
+			<li uib-dropdown class="dropdown menu-large">
+				<a href="#" uib-dropdown-toggle class="dropdown-toggle" data-toggle="dropdown">Sitemap <b class="caret"></b></a>				
+				<ul uib-dropdown-menu class="dropdown-menu megamenu row">
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">Support</li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">Locations</a></li>
+							<li><a href="#">Feedback</a></li>
+							<li><a href="#">Technical Support</a></li>
+							<li><a href="#">Account</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+-->			
+		</ul>
+		</div>
+      </div>
+      </div>
+</nav>
